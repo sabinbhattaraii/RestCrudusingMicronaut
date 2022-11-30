@@ -1,0 +1,24 @@
+micronaut:
+  application:
+    name: restcrud
+
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/intern
+    username: postgres
+    password: admin
+    dialect: POSTGRES
+    driverClassName: org.postgresql.Driver
+    db-type: postgres
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: create-drop
+          show_sql: true
